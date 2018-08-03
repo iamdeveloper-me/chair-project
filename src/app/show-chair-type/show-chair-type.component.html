@@ -1,0 +1,90 @@
+
+
+<div class="show" *ngFor="let chairtype of chairArray">
+    <div class="data">
+    <h3>chairid: {{chairtype.id}}</h3>
+    <h3>Name:{{chairtype.name}}</h3>
+    <h3>Description: {{chairtype.description}}</h3>
+    <h3>Chair: {{chairtype.chair}}</h3>
+    <h3>Parent_id: {{chairtype.parent_id}}</h3>
+    <h3>Part Type: {{chairtype.part_type}}</h3>
+    <h3>Part Type Name: {{chairtype.part_type_name}}</h3>
+    <h3>Chair Name: {{chairtype.chair_name}}</h3>
+    <button type="button"  class="btn btn-danger btn-lg" (click)="delete(chairtype.id)">Delete</button>
+    &nbsp;&nbsp;
+    <button (click)="openModel(chairtype)" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update</button>
+     
+  
+  </div>
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog"> 
+        <!-- Modal content-->
+         <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                  {{ chair_obj  |json }}
+                <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                    <form (ngSubmit)="upForm(f)" #f="ngForm"> 
+                        <div id ="user-data">
+                          <div class ="form-group">
+                            <label for="name"><b>Name</b>
+                            </label>
+                              <input type="text" id="name" [(ngModel)] = "chair_obj.name" name = "name" required> 
+                         </div>
+          
+                          <br><br>
+          
+                          <div class ="form-group">
+                            <label for="description"><b>Description</b>
+                            </label> 
+                              <input 
+                              type="text" 
+                              id="description" 
+                              class="form-control" [(ngModel)] = "chair_obj.description" name="description" required> 
+                          </div> 
+                              
+                            <br><br>
+                            <div class ="form-group">
+                                <label for="chair"><b>ChairId</b>
+                                </label> 
+                                  <input 
+                                  type="text" 
+                                  id="chair" 
+                                  class="form-control" [(ngModel)] = "chair_obj.chair" name="chair" required> 
+                              </div><div class ="form-group">
+                                  <label for="parent_id"><b>ParentId</b>
+                                  </label> 
+                                    <input 
+                                    type="text" 
+                                    id="parent_id" 
+                                    class="form-control" [(ngModel)] = "chair_obj.parent_id" name="parent_id" required> 
+                                </div><div class ="form-group">
+                                    <label for="part_type"><b>PartType</b>
+                                    </label> 
+                                      <input 
+                                      type="text" 
+                                      id="part_type" 
+                                      class="form-control" [(ngModel)] = "chair_obj.part_type" name="part_type" required> 
+                                  </div>
+          <input type="hidden" name="b_id" id="b_id" [(ngModel)] = "chair_obj.id">
+                             <button type="submit" >Edit</button>
+                        </div> 
+                     </form>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>

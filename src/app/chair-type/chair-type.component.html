@@ -1,0 +1,42 @@
+
+<div>
+    <ul>
+        <li><a routerLink="list">Show ChairType List</a></li>
+    </ul>
+    </div>
+<h1>Create The Chair Type</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div id="chair-data">
+          <div class="form-group">
+            <label for="name">Name</label><br><br>
+            <input type="text" id="name" class="form-control" [(ngModel)] = "chair.name" name="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="description">Description</label><br><br>
+            <input type="text" id="description" class="form-control" [(ngModel)] = "chair.description" name="description"><br><br>
+          </div>
+          <div class="form-group">
+            <label for="part_type">Part Type</label><br><br>
+            <input type="text" id="part_type" class="form-control" [(ngModel)] = "chair.part_type" name="part_type"><br><br>
+          </div>
+          <div class="form-group">
+            <label for="parent_id">Parent Id</label><br><br>
+            <input type="text" id="parent_id" class="form-control" [(ngModel)] = "chair.parent_id" name="parent_id"><br><br>
+          </div>
+          <div class="form-group">
+            <label for="chair">Chair Id</label><br><br>
+            <input type="text" id="chair" class="form-control" [(ngModel)] = "chair.chair" name="chair"><br><br>
+          </div>
+        </div>
+        <div class="form-group">
+          
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
