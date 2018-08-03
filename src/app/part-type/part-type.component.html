@@ -1,0 +1,65 @@
+<h1>Part type</h1>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
+  <div id ="user-data">
+    <div class ="form-group">
+      <label for="name"><b>Name</b>
+      </label>
+        <input type="text" id="name" [(ngModel)] = "user.name" name = "username" required> 
+   </div>
+
+    <br><br>
+
+    <div class ="form-group">
+      <label for="description"><b>Description</b>
+      </label> 
+        <input 
+        type="text" 
+        id="description" 
+        class="form-control" [(ngModel)] = "user.description" name="description" required> 
+    </div> 
+
+   <br><br>
+
+     <div class ="form-group">
+      <label for="part"><b>Part</b>
+      </label> 
+        <input 
+        type="text" 
+        id="part" 
+        class="form-control" [(ngModel)] = "user.part" name="part" required> 
+    </div> 
+
+     <br><br>
+    <div class ="form-group">
+      <label for="quantity_item"><b>Quantity_item</b>
+      </label> 
+        <input 
+        type="text" 
+        id="quantity_item" 
+        class="form-control" [(ngModel)] = "user.quantity_item" name="quantity_item" required> 
+    </div> 
+    <br><br>
+
+
+  <div class ="form-group">
+      <label for="price_item"><b>Price_item</b>
+      </label> 
+        <input 
+        type="text" 
+        id="price_item" 
+        class="form-control" [(ngModel)] = "user.price_item" name="price_item" required> 
+    </div>
+
+
+
+
+        
+      <br><br>
+
+       <button type="submit" >Chair type </button>
+  </div> 
+</form>
+
+<div>
+  <a routerLink = "list">show all part-type list </a>
+</div>

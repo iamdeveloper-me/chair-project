@@ -1,0 +1,32 @@
+<h1>Part</h1>
+
+<div class="part">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
+    <div id ="user-data">
+      <div class ="form-group">
+        <label for="name"><b>Name</b>
+        </label>
+          <input type="text" id="name" [(ngModel)] = "user.name" name = "username" required> 
+     </div>
+
+      <br><br>
+
+      <div class ="form-group">
+        <label for="description"><b>Description</b>
+        </label> 
+          <input 
+          type="text" 
+          id="description" 
+          class="form-control" [(ngModel)] = "user.description" name="description" required> 
+      </div> 
+          
+        <br><br>
+
+         <button type="submit" >Chair</button>
+    </div> 
+  </form>
+</div>
+
+<div>
+  <a routerLink = "list">show all parts </a>
+</div>
