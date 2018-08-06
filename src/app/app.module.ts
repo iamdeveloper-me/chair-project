@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ShowpartsComponent } from './showparts/showparts.component';
-import { ShowparttypeComponent } from './showparttype/showparttype.component'
+import { ShowparttypeComponent } from './showparttype/showparttype.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 const appRoutes: Routes = [
   
@@ -24,10 +25,11 @@ const appRoutes: Routes = [
   { path: 'chair', component: ChairComponent },
   { path: 'chair/list',component: ShowChairComponent},
   { path: 'chairtype/list',component: ShowChairTypeComponent},
-   {path: 'part', component:PartComponent},
-    {path: 'part-type', component:PartTypeComponent},
-    {path: 'part/list', component: ShowpartsComponent },
-   {path: 'part-type/list', component: ShowparttypeComponent}
+  {path: 'part', component:PartComponent},
+  {path: 'part-type', component:PartTypeComponent},
+  {path: 'part/list', component: ShowpartsComponent },
+  {path: 'part-type/list', component: ShowparttypeComponent},
+  {path: 'login', component: LoginComponent}
 ]
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
     PartTypeComponent,
     LoginComponent,
     ShowpartsComponent,
-    ShowparttypeComponent
+    ShowparttypeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

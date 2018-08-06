@@ -1,11 +1,18 @@
-.part{    background-color: red;
-   width: 35%;
+.part{   
+    width: 35%;
     height: 147%;
     margin-left: 32%
     }
 
     form{   
           padding-top: 10%;
-    width: 35%;
-    height: 147%;
-    margin-left: 32%}
+          width: 35%;
+          height: 147%;
+          margin-left: 32%
+        }
+
+ input{
+
+      width: 100%;
+
+ }       
